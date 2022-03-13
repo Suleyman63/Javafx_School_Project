@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
+   <children>
+      <VBox layoutX="14.0" layoutY="71.0" prefHeight="271.0" prefWidth="84.0" spacing="24.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="28.0" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="FIRSTNAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="LASTNAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="PHONE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="32.0" prefWidth="38.0" text="EMAIL">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="221.0" prefHeight="16.0" prefWidth="83.0" text="BIRTH DATE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="181.0" prefHeight="23.0" prefWidth="54.0" text="KLASSE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="122.0" layoutY="71.0" prefHeight="271.0" prefWidth="199.0" spacing="17.0">
+         <children>
+            <TextField fx:id="tfId" prefHeight="24.0" prefWidth="170.0" style="-fx-background-radius: 15PX;" />
+            <TextField fx:id="tfFirstname" style="-fx-background-radius: 15PX;" />
+            <TextField fx:id="tfLastname" style="-fx-background-radius: 15PX;" />
+            <TextField fx:id="tfPhone" prefHeight="25.0" prefWidth="199.0" style="-fx-background-radius: 15PX;" />
+            <TextField fx:id="tfEmail" layoutX="10.0" layoutY="166.0" prefHeight="25.0" prefWidth="199.0" style="-fx-background-radius: 15PX;" />
+            <DatePicker fx:id="tfDateofbirth" />
+            <TextField fx:id="tfKlasse" layoutX="10.0" layoutY="175.0" prefHeight="25.0" prefWidth="199.0" style="-fx-background-radius: 15PX;" />
+         </children>
+      </VBox>
+      <TableView fx:id="tableview" layoutX="344.0" layoutY="71.0" prefHeight="423.0" prefWidth="833.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="55.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="colFirstname" prefWidth="135.0" style="-fx-alignment: center;" text="FIRSTNAME" />
+            <TableColumn fx:id="colLastname" prefWidth="102.0" style="-fx-alignment: center;" text="LASTNAME" />
+            <TableColumn fx:id="colPhone" prefWidth="137.0" style="-fx-alignment: center;" text="PHONE" />
+            <TableColumn fx:id="colEmail" prefWidth="143.0" style="-fx-alignment: center;" text="EMAIL" />
+            <TableColumn fx:id="colDateofbirth" prefWidth="134.0" style="-fx-alignment: center;" text="DATE BIRTH" />
+            <TableColumn fx:id="colKlasse" prefWidth="134.0" style="-fx-alignment: center;" text="KLASSE" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="241.0" layoutY="388.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #0c6506; -fx-background-radius: 15px;" text="ADD" textFill="#f2eeee" />
+      <Button fx:id="btnUpdate" layoutX="20.0" layoutY="388.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #9ca102 #9ca102; -fx-background-radius: 15px;" text="UPDATE" textFill="#f2e8e8" />
+      <Button fx:id="btnDelete" layoutX="132.0" layoutY="388.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: brown; -fx-background-radius: 15px;" text="DELETE" textFill="#fff8f8" />
+      <Button fx:id="btnSearch" layoutX="1090.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="35.0" prefWidth="83.0" style="-fx-background-color: darkblue; -fx-background-radius: 15px;" text="SEARCH" textFill="#f5eeee" />
+      <Button fx:id="btnClear" layoutX="132.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: gray; -fx-background-radius: 15px;" text="CLEAR" textFill="#f5efef" />
+      <Button fx:id="btnExit" layoutX="241.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnOnExit" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: black; -fx-background-radius: 15px;" text="EXIT" textFill="#fcf1f1" />
+      <TextField fx:id="textSearch" layoutX="885.0" layoutY="24.0" prefHeight="35.0" prefWidth="199.0" promptText="search by firstname" style="-fx-background-radius: 20px;" />
+      <Button fx:id="alllistBtn" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" onAction="#allListBtnOnAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: BLUE; -fx-background-radius: 15px;" text="ALL LIST" textFill="#f8f4f4" />
+      <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#exportOnAction" prefHeight="35.0" prefWidth="115.0" style="-fx-background-color: darkgreen;" text="EXPORT TO CSV" textFill="#fcf6f6" />
+   </children>
+</AnchorPane>
